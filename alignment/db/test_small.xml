@@ -1,0 +1,78 @@
+BLASTN 2.10.1+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: prot_db.fasta
+           2 sequences; 737,950 total letters
+
+
+
+Query= H9U8IX202BYF90
+
+Length=254
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+NC_007346.1 Emiliania huxleyi virus 86, complete genome               25.6    6.2  
+NC_000852.5 Paramecium bursaria Chlorella virus 1, complete genome    25.6    6.2  
+
+
+>NC_007346.1 Emiliania huxleyi virus 86, complete genome
+Length=407339
+
+ Score = 25.6 bits (27),  Expect = 6.2
+ Identities = 18/21 (86%), Gaps = 0/21 (0%)
+ Strand=Plus/Plus
+
+Query  157    GGTAAAATCCTTTGATCTATT  177
+              |||||||||| || |||| ||
+Sbjct  55042  GGTAAAATCCATTAATCTTTT  55062
+
+
+>NC_000852.5 Paramecium bursaria Chlorella virus 1, complete genome
+Length=330611
+
+ Score = 25.6 bits (27),  Expect = 6.2
+ Identities = 18/21 (86%), Gaps = 0/21 (0%)
+ Strand=Plus/Minus
+
+Query  157    GGTAAAATCCTTTGATCTATT  177
+              || ||||||||||| | ||||
+Sbjct  20718  GGCAAAATCCTTTGGTGTATT  20698
+
+
+ Score = 24.7 bits (26),  Expect = 6.2
+ Identities = 19/23 (83%), Gaps = 0/23 (0%)
+ Strand=Plus/Plus
+
+Query  158     GTAAAATCCTTTGATCTATTGAT  180
+               || |||||||||||| | | |||
+Sbjct  152385  GTGAAATCCTTTGATATGTAGAT  152407
+
+
+
+Lambda      K        H
+   0.634    0.408    0.912 
+
+Gapped
+Lambda      K        H
+   0.625    0.410    0.780 
+
+Effective search space used: 171932564
+
+
+  Database: prot_db.fasta
+    Posted date:  Oct 13, 2020  2:19 PM
+  Number of letters in database: 737,950
+  Number of sequences in database:  2
+
+
+
+Matrix: blastn matrix 2 -3
+Gap Penalties: Existence: 5, Extension: 2
