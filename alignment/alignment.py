@@ -17,7 +17,7 @@ db_name = path + "db/out_prot_db"
 
 _id = str(uuid.uuid4().hex) 
 out_name = "tmp." + _id + ".xml"
-query_name =  path + "OTU_reference_small"+ _id  +".fasta"
+query_name =  "tmp/OTU_reference_small"+ _id  +".fasta"
 
 alignment_sequence = Seq(sys.argv[1])
 
@@ -26,10 +26,10 @@ SeqIO.write(record, query_name, "fasta")
 
 blastn_cline = NcbiblastnCommandline(cmd=blastn_path, query=query_name, 
                                      db= db_name, evalue=10,
-                                     outfmt=5, task='blastn', out=path + "xml/" + out_name)
+                                     outfmt=5, task='blastn', out= "tmp/xml/" + out_name)
 
 stdout, stderr = blastn_cline()
-result_handle = open(path+"xml/" + out_name)
+result_handle = open("tmp/xml/" + out_name)
 blast_record = NCBIXML.read(result_handle)
 send_message_back = []
 for alignment in blast_record.alignments:
