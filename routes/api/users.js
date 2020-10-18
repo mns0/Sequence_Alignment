@@ -155,7 +155,7 @@ router.post(
 // @access  None
 let pyAlignment = (alignmentString) => {
 	return new Promise((resolve, reject) => {
-		const process = spawn('/Users/manish/anaconda3/bin/python', [
+		const process = spawn('python', [
 			'./alignment/alignment.py',
 			alignmentString,
 		]);
