@@ -10,9 +10,9 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 
 #path = '/Users/manish/Documents/ginkgo_bioworks_project/alignment/'
-path = './'
+path = os.getcwd()
 #blastn_path = '/usr/local/ncbi/blast/bin/blastn'
-blastn_path = './blastn'
+blastn_path = os.getcwd() + './blastn'
 db_name = path + "db/out_prot_db"
 
 _id = str(uuid.uuid4().hex) 
