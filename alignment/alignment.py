@@ -12,7 +12,7 @@ from Bio.SeqRecord import SeqRecord
 #path = '/Users/manish/Documents/ginkgo_bioworks_project/alignment/'
 path = './'
 #blastn_path = '/usr/local/ncbi/blast/bin/blastn'
-blastn_path = './'
+blastn_path = './blastn'
 db_name = path + "db/out_prot_db"
 
 _id = str(uuid.uuid4().hex) 
