@@ -11,7 +11,7 @@ from Bio.SeqRecord import SeqRecord
 
 path = os.getcwd() + '/alignment'
 blastn_path = path + '/blastn'
-db_name     = path + "/db/out_prot_db"
+db_name     = path + "/db2/new_db"
 _id = str(uuid.uuid4().hex) 
 out_name = "tmp." + _id + ".xml"
 query_name =  "./OTU_reference_small" + _id  + ".fasta"
