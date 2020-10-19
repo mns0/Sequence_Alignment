@@ -12,8 +12,8 @@ from Bio.SeqRecord import SeqRecord
 #blastn_path = '/usr/local/ncbi/blast/bin/blastn'
 #path = '/Users/manish/Documents/ginkgo_bioworks_project/alignment/'
 
-path = os.getcwd()
-blastn_path = "/app/alignment" + '/blastn'
+path = "/app/alignment"
+blastn_path = path + '/blastn'
 db_name     = path + "/db/out_prot_db"
 _id = str(uuid.uuid4().hex) 
 out_name = "tmp." + _id + ".xml"
