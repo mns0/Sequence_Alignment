@@ -9,7 +9,7 @@ from Bio.Blast.Applications import NcbiblastnCommandline
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 
-path = os.getcwd()
+path = os.getcwd() + '/alignment'
 blastn_path = path + '/blastn'
 db_name     = path + "/db/out_prot_db"
 _id = str(uuid.uuid4().hex) 

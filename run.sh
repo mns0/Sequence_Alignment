@@ -9,3 +9,5 @@ npm install
 
 cd ..
 
+#run the app locally
+npm run dev 
