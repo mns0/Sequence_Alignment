@@ -14,7 +14,6 @@ from Bio.SeqRecord import SeqRecord
 
 path = os.getcwd()
 blastn_path = path + '/blastn'
-blastn_path = 'blastn'
 db_name     = path + "/db/out_prot_db"
 _id = str(uuid.uuid4().hex) 
 out_name = "tmp." + _id + ".xml"
