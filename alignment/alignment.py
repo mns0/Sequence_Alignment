@@ -31,21 +31,23 @@ stdout, stderr = blastn_cline()
 result_handle = open("/tmp/" + out_name)
 blast_record = NCBIXML.read(result_handle)
 send_message_back = []
+largest_evalue = 0
 for alignment in blast_record.alignments:
     for hsp in alignment.hsps:
-        single_ret = {
-                'sequence': alignment.title,
-                'length' : alignment.length,
-                'evalue' : hsp.expect,
-                'identities' : hsp.identities,
-                'hspquery' : hsp.query,
-                'hspmatch' : hsp.match,
-                'hspsbjct' : hsp.sbjct,
-                'hspstart' : hsp.sbjct_start,
-                'hspend' : hsp.sbjct_end
-                }
-        send_message_back.append(single_ret)
-
+        if hsp.expect > largest_evalue:
+            largest_evalue = hsp.expect
+            send_message_back = [{
+                    'sequence': alignment.title,
+                    'length' : alignment.length,
+                    'evalue' : hsp.expect,
+                    'identities' : hsp.identities,
+                    'hspquery' : hsp.query,
+                    'hspmatch' : hsp.match,
+                    'hspsbjct' : hsp.sbjct,
+                    'hspstart' : hsp.sbjct_start,
+                    'hspend' : hsp.sbjct_end
+                    }]
+            #send_message_back.append(single_ret)
 
 os.remove("/tmp/" + out_name)
 os.remove(query_name)
