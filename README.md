@@ -12,7 +12,7 @@ Link to the running application:
 Here's a sample sequence string: 
 
 ```
-ACGGTTGGGGTGGAGACGACGACTTGGCCTCTTGGCCATCCATCCCACTGATGGTGTCATCCGTTCATAC
+AATGCGTTAAACTTTTAGGTAAAACATTTTCTTCTATTTTTTGATTATAATCCCCTCCAAATGTTAAATG
 ```
 The alignment with the largest e-values is returned in an alignment table. Alignments are structured and performed via the Biopython library and a blastn executable. Alignments are performed against a local blast database found in the /alignments folder. Results are stored in a cloud Mongo database instance. The front-end uses React components, Redux, and Tailwind CSS while the backend is an express framework. Passwords are salted and hashed before storage so the app is marginally secure, however, for testing use false credentials.
 
