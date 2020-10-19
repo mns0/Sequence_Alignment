@@ -43,7 +43,7 @@ const Alignments = ({ alignments }) => {
 						</th>
 						<th className='bg-blue-100 border text-left px-8 py-4'>E-Value</th>
 						<th className='bg-blue-100 border text-left px-8 py-4'>
-							Hit Sequence Start : Hit Sequence End
+							Hit Sequence Start : Hit Sequence End (NT Number)
 						</th>
 						<th className='bg-blue-100 border text-left px-8 py-4'>
 							Matched Sequence (Query top: Hit bottom)

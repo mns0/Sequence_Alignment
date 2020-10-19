@@ -1,3 +1,5 @@
+//Store all of the alignment information with a user for similpicity
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({

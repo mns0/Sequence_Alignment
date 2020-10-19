@@ -4,10 +4,8 @@ import {
 	ALIGNMENT_SUCCESS,
 	AUTH_ERROR,
 	LOGIN_SUCCESS,
-	//LOGIN_FAIL,
 	LOGOUT,
 	REGISTER_SUCCESS,
-	//REGISTER_FAIL,
 	USER_LOADED,
 } from '../actions/types';
 
