@@ -5,6 +5,7 @@ Link to the running application:
 ](https://dry-headland-10538.herokuapp.com/)
 
 
+
 ### Sign-up, login, and run an alignment!
 #### Note: Do not use your real email address/passwords to sign-up
 
