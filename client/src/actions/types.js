@@ -12,5 +12,7 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'; //run on success
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOGOUT = 'LOGOUT';
 //
+export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
+//
 export const ALIGNMENT_ERROR = 'ALIGNMENT_ERROR';
 export const ALIGNMENT_SUCCESS = 'ALIGNMENT_SUCCESS';
