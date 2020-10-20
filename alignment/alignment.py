@@ -2,12 +2,13 @@ import json
 import os
 import sys
 import uuid
-
+import math
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
 from Bio.Blast.Applications import NcbiblastnCommandline
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
+
 
 path = os.getcwd() + '/alignment'
 blastn_path = path + '/blastn'
@@ -19,18 +20,18 @@ query_name =  "./OTU_reference_small" + _id  + ".fasta"
 alignment_sequence = Seq(sys.argv[1])
 record = SeqRecord(alignment_sequence,id="",description="")
 SeqIO.write(record, query_name, "fasta")
-blastn_cline = NcbiblastnCommandline(cmd=blastn_path,query=query_name,word_size=5, 
-                                     db= db_name, evalue=10000000000000,
+blastn_cline = NcbiblastnCommandline(cmd=blastn_path,query=query_name,word_size=len(sys.argv[1]), 
+                                     db= db_name, evalue=10000,
                                      outfmt=5, task='blastn', out= out_name)
 
 stdout, stderr = blastn_cline()
 result_handle = open(out_name)
 blast_record = NCBIXML.read(result_handle)
 send_message_back = []
-largest_evalue = 0
+smallest_evalue = math.inf 
 for alignment in blast_record.alignments:
     for hsp in alignment.hsps:
-        if hsp.expect > largest_evalue:
+        if hsp.expect < smallest_evalue:
             largest_evalue = hsp.expect
             send_message_back = [{
                     'sequence': alignment.title,
