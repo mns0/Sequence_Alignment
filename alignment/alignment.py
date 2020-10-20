@@ -21,7 +21,7 @@ alignment_sequence = Seq(sys.argv[1])
 record = SeqRecord(alignment_sequence,id="",description="")
 SeqIO.write(record, query_name, "fasta")
 blastn_cline = NcbiblastnCommandline(cmd=blastn_path,query=query_name,word_size=len(sys.argv[1]), 
-                                     db= db_name, evalue=10000,
+                                     db= db_name, evalue=100000,
                                      outfmt=5, task='blastn', out= out_name)
 
 stdout, stderr = blastn_cline()
