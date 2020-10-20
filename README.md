@@ -15,7 +15,7 @@ Here's a sample sequence string:
 ```
 AATGCGTTAAACTTTTAGGTAAAACATTTTCTTCTATTTTTTGATTATAATCCCCTCCAAATGTTAAATG
 ```
-The alignment with the largest e-value is returned in an alignment table.
+The alignment with the smallest e-value is returned in an alignment table.
 Alignments are structured and performed via the Biopython library and a blastn
 executable. Alignments are performed against a local blast database found in
 the /alignments folder. Results are stored in a cloud Mongo database instance.
