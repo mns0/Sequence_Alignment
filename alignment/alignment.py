@@ -19,8 +19,8 @@ query_name =  "./OTU_reference_small" + _id  + ".fasta"
 alignment_sequence = Seq(sys.argv[1])
 record = SeqRecord(alignment_sequence,id="",description="")
 SeqIO.write(record, query_name, "fasta")
-blastn_cline = NcbiblastnCommandline(cmd=blastn_path, query=query_name, 
-                                     db= db_name, evalue=10,
+blastn_cline = NcbiblastnCommandline(cmd=blastn_path,query=query_name,word_size=5, 
+                                     db= db_name, evalue=10000000000000,
                                      outfmt=5, task='blastn', out= out_name)
 
 stdout, stderr = blastn_cline()
